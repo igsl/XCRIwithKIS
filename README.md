@@ -11,3 +11,5 @@ The project investigated joining up the XCRI-CAP and KIS data sets to provide me
 You can try out the 'XCRI-CAP with KIS' course search on the [Demonstrator web page](http://kis.igsl.co.uk/kis/ "XCRI-CAP with KIS course search demonstrator"). Start by entering a Course Title search topic (which searches against XCRI-CAP data) and optionally an 'Assessment by coursework' or 'Work/Study six months after finishing the course' parameter (which search against KIS data). The demonstrator then uses the [XXP](http://www.xxp.org/ "XXP server") server to return a list of matching courses. Click on a course ID to see the combined XCRI-CAP and KIS course details.
 
 For more details see the [project blog](http://xcriwithkis.wordpress.com/ "XCRI-CAP with KIS project blog") or for background info see the project's [JISC page](http://www.jisc.ac.uk/whatwedo/programmes/elearning/coursedata/demonstrators/kis-data.aspx "XCRI-CAP with KIS JISC page").
+
+The project deliverables are available under [open source licenses](https://github.com/igsl/XCRIwithKIS/wiki/Open-Source-License-info "open source licenses").
