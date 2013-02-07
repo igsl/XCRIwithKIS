@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+  <h:head>
+    <title>XCRI-CAP KIS Course Details</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Anthony Au" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <style type="text/css" media="all">
+      @import "css/kis.css";
+      @import "css/chart.css";
+    </style>
+    <script>
+      function ext() {
+        this.cfg.seriesDefaults = {
+          renderer: $.jqplot.BarRenderer,
+          rendererOptions: {fillToZero: true}
+        },
+        this.cfg.axes = {
+          yaxis: {
+            labelOptions: {fontFamily: 'Verdana', fontSize: '8pt'}
+          },
+          xaxis: {
+            pad: 1.05,
+            renderer: $.jqplot.CategoryAxisRenderer,
+            rendererOptions: {
+              tickRenderer: $.jqplot.CanvasAxisTickRenderer
+            },
+            labelOptions: {fontFamily: 'Verdana', fontSize: '8pt'},
+            labelRenderer: $.jqplot.CanvasTextRenderer,
+            tickOptions: {
+              fontSize: '8pt',
+              angle: -30
+            }
+          }
+        },
+        this.cfg.axes.xaxis.ticks = this.cfg.categories;
+      }
+    </script>
+  </h:head>
+  <h:body>
+    <p class="hidden">
+      <a href="#content">Skip to content</a>
+    </p>
+    <div id="page">
+      <div id="nonFooter">
+        <header>
+          <span class="title">Extending XCRI-CAP with KIS data</span>
+        </header>
+        <!-- END header -->
+        <div id="content">
+          <div id="contentMain">
+            <h1 id="headingFeaturesPages">
+              <span class="featureIcon"></span>THE OPEN UNIVERSITY<span class="hidden">&ndash;</span> <span class="subTitle">#{xxpChartBean.coe.title}</span>
+            </h1>
+            <h2>Description (XCRI-CAP)</h2>
+            <p>
+              #{xxpChartBean.coe.description}
+            </p>
+            <p><a href="#{xxpChartBean.coe.url}" target="_blank">See this course at THE OPEN UNIVERSITY website</a></p>           
+            <h2>Entry qualifications (KIS)</h2>
+            <h:outputText rendered="#{xxpChartBean.kisCoe.kisEnyEntryList.isEmpty()}" value="No Record found for this course."/>
+            <p:pieChart id="enyModel" value="#{xxpChartBean.enyModel}" legendPosition="e" fill="true" showDataLabels="true"  
+                        title="These are the qualifications students held before enrolling on this course." 
+                        rendered="#{!xxpChartBean.kisCoe.kisEnyEntryList.isEmpty()}"
+                        style="width:550px;height:300px;margin-top:30px;margin-bottom:5px;" sliceMargin="5" diameter="190" />  
+            <h:outputText rendered="#{!xxpChartBean.kisCoe.kisEnyEntryList.isEmpty()}" value="Sample from #{xxpChartBean.enyPop } students." class="chartSmallPrint"/>            
+
+            <h2>#{xxpChartBean.kisCoe.avgcoursework}% Assessment by coursework (KIS)</h2>
+            <p:barChart id="horizontal" value="#{xxpChartBean.courseStageModel}"  style="height:300px;width:550px;margin-top:30px;margin-bottom:5px;"  
+                        animate="false"  yaxisLabel="coursework Assessment(%)" legendPosition="ne"
+                        datatipFormat="#{xxpChartBean.datatipFormat}" 
+                        title=""  min="0" max="100"/> 
+
+            <h2>#{xxpChartBean.empAvg}% Go on to work and/or study (KIS)</h2>
+            <h:outputText rendered="#{xxpChartBean.kisCoe.kisEmtEmploymentList.isEmpty()}" value="No Record found for this course."/>
+            <p:pieChart id="empModel" value="#{xxpChartBean.empModel}" legendPosition="e" fill="true" showDataLabels="true"  
+                        title="This is what students are doing six months after finishing the course." 
+                        rendered="#{!xxpChartBean.kisCoe.kisEmtEmploymentList.isEmpty()}"
+                        style="width:550px;height:300px;margin-top:30px;margin-bottom:5px;" sliceMargin="5" diameter="190" />  
+            <h:outputText rendered="#{!xxpChartBean.kisCoe.kisEmtEmploymentList.isEmpty()}" value="Sample from #{xxpChartBean.empPop} students." class="chartSmallPrint"/>
+            <p class="smallPrint">XCRI-CAP and KIS Data as at 5th December 2012. <br/>Percentage values are calculated and may be subject to rounding.</p>
+            <!-- END featureNavigation -->
+          </div>
+          <!-- END contentMain -->
+
+          <!-- END contentSub -->
+          <div class="clearer">
+          </div>
+        </div>
+        <!-- END content -->
+      </div>
+      <!-- END nonFooter -->
+    </div>
+    <!-- END page -->
+    <div id="footer">
+      <ul id="bottomLinks">
+        <li class="first">
+          <a href="http://www.jisc.ac.uk." target="_blank">JISC</a>
+        </li>
+        <li>
+          <a href="http://www.xxp.org" target="_blank">XXP</a>
+        </li>
+        <li>
+          <a href="http://www.ingenius-solutions.co.uk/" target="_blank">IGSL</a>
+        </li>
+        <li>
+          <a href="http://www.alanpaull.co.uk" target="_blank">APS</a>
+        </li>        
+        <li>
+          <a href="mailto:xcri-kis@igsl.co.uk?subject=XCRI-CAP KIS demonstrator enquiry" target="_blank">Contact Us</a>
+        </li>
+      </ul>
+      <p>
+        &copy; 2012 InGenius Solutions Limited (IGSL). All rights reserved.
+      </p>
+    </div>
+    <!-- END footer -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-5836281-21']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </h:body>
+</html>
+
+

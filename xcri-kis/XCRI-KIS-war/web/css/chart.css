@@ -1,0 +1,26 @@
+/* 
+    Document   : chart
+    Created on : 23-Oct-2012, 00:30:13
+    Author     : Tony
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+td.jqplot-table-legend {
+border: 0px;
+padding: 2px;
+margin: 0px;
+background: rgba(230, 230, 230, 0.1);
+text-align: left;
+vertical-align: central;
+font-size: 9px;
+}
+.jqplot-highlighter-tooltip {
+    border: 1px solid #aaaaaa;
+    font-size: 11px;
+    white-space: nowrap;
+    background: rgba(230, 230, 230, 0.2);
+    padding: 2px;
+    color: #000;
+}
+

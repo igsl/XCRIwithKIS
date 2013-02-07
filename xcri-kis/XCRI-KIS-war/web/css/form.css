@@ -1,0 +1,192 @@
+/* 
+    Document   : form
+    Created on : 23-Oct-2012, 03:21:49
+    Author     : Tony
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+@charset "utf-8";
+/* CSS Document */
+
+/*Add this style if we want to show the form have been changed*/
+/*form.changed {border:1px dotted red;}*/
+
+form.kis-form{
+  width: 100%;
+  margin-top: 25px;
+}
+
+form.kis-form fieldset{
+  background: #7abcff; /* Old browsers */
+  background: -moz-linear-gradient(top,  #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+  padding-bottom: 20px;
+  border-radius: 9px;
+  -moz-border-radius-topright:9px;
+  -moz-border-radius-topleft:9px;
+  -moz-border-radius-bottomright:9px;
+  -moz-border-radius-bottomleft:9px;
+  -webkit-border-radius: 9px;
+}
+
+form.kis-form legend{
+  width: auto;
+  font-size: 100%;
+  color: #dfd;
+  background-image: linear-gradient(bottom, rgb(58,92,185) 37%, rgb(87,120,222) 69%, rgb(114,156,255) 85%);
+  background-image: -o-linear-gradient(bottom, rgb(58,92,185) 37%, rgb(87,120,222) 69%, rgb(114,156,255) 85%);
+  background-image: -moz-linear-gradient(bottom, rgb(58,92,185) 37%, rgb(87,120,222) 69%, rgb(114,156,255) 85%);
+  background-image: -webkit-linear-gradient(bottom, rgb(58,92,185) 37%, rgb(87,120,222) 69%, rgb(114,156,255) 85%);
+  background-image: -ms-linear-gradient(bottom, rgb(58,92,185) 37%, rgb(87,120,222) 69%, rgb(114,156,255) 85%);
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.37, rgb(58,92,185)),
+    color-stop(0.69, rgb(87,120,222)),
+    color-stop(0.85, rgb(114,156,255))
+    );
+  font-family: arial;
+  padding: 5px 5px 5px;
+  margin-left: 15px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+form.kis-form fieldset ul {
+  margin-left: 13px;
+  margin-top: 0px;
+}
+
+form.kis-form fieldset ul.nav {
+  list-style-type: none;
+  margin: 0 0 0 13px;
+  padding: 0;
+}
+
+form.kis-form fieldset ul.nav li.left {
+  float: left;
+  margin-left: 15px;
+}
+
+form.kis-form fieldset ul.nav li.right {
+  float: right;
+  margin-right: 15px;
+}
+
+form.kis-form fieldset ul.nav li a {
+  vertical-align: bottom;
+  color: #0060BF;
+  font-weight: bold;
+}
+
+form.kis-form fieldset ul li {
+  margin-top: 12px;
+  margin-left: 15px;
+  list-style: none;
+}
+
+form.kis-form fieldset input[type="submit"] {
+  padding: 2px 5px 2px 5px;
+  background: #fefefd; /* Old browsers */
+  background: -moz-linear-gradient(top,  #fefefd 0%, #dce3c4 42%, #aebf76 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefd), color-stop(42%,#dce3c4), color-stop(100%,#aebf76)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #fefefd 0%,#dce3c4 42%,#aebf76 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #fefefd 0%,#dce3c4 42%,#aebf76 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #fefefd 0%,#dce3c4 42%,#aebf76 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #fefefd 0%,#dce3c4 42%,#aebf76 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefd', endColorstr='#aebf76',GradientType=0 ); /* IE6-9 */
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+form.kis-form fieldset label{
+  margin-right: 15px;
+}
+
+
+
+
+.xxp-form p {
+  font-size: 88%;
+  margin-left: 10px;
+}
+
+#content-container-2 .xxp-form p.server_msg {
+  font-size: 95%;
+  margin-left: 12px;
+  color: #EA5200;
+  font-weight: bold;
+}
+
+.xxp-form tr td {
+  padding-top: 5.0px;
+  white-space:nowrap;
+}
+
+.xxp-form label {
+  width: auto;
+  float: left;
+  text-align: left;
+  padding-top: 0em;
+  margin-left: 10px;
+  display: block;
+  font-size: 88%;
+
+}
+
+.xxp-form .status {
+  padding-left: 0px;
+  vertical-align: middle;
+  width: auto;
+  white-space:pre-wrap;
+}
+
+.xxp-form select, .xxp-form textarea, .xxp-form input {
+  margin-left: 0;
+}
+
+.xxp-form table {
+  margin-right: 3px;
+}
+
+.xxp-form input[type="text"],  .xxp-form input[type="password"],  .xxp-form textarea{
+  width:250.0px;
+}
+
+.xxp-form select {
+  width:200.0px;
+}
+
+.xxp-form label.error {
+  background:url("../images/unchecked.gif") no-repeat 0px 0px;
+  padding-left: 16px;
+  padding-bottom: 2px;
+  font-weight: bold;
+  color: #EA5200;
+  font-style:normal;
+  font-size: 75%;  
+}
+
+.xxp-form label.checked {
+  background:url("../images/checked.gif") no-repeat 0px 0px;
+}
+
+.xxp-form .success_msg {
+  font-weight: bold;
+  color: #0060BF;
+  margin-left: 19px;
+}
+
+
+
+
+
+
